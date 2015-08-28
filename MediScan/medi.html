@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Script/bootstrap.js"></script>
+    <link href="Script/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="Script/bootstrap.css" rel="stylesheet" />
+    <title>MEDI SCAN</title>
+    
+
+    <script>
+        function myFunction() {
+           
+            var xmlhttp;
+            var id = document.getElementById("patientid").value;
+            document.getElementById("id1").innerHTML = id;
+           // alert(id);
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+		  
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+	  
+            xmlhttp.onreadystatechange=function()
+            {   
+			
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {    
+                    //alert("sucess");
+                    var rrp=xmlhttp.responseText;		
+                   
+                   var ap = JSON.parse(rrp);
+
+                  
+                    name = ap.name;
+                    //alert(name);
+                    document.getElementById("name").innerHTML = name;
+                    mail = ap.email;
+                    //alert(mail);
+                    document.getElementById("mail").innerHTML = mail;
+                    phno = ap.address.zipcode;
+                    document.getElementById("phno").innerHTML = phno;
+                    addr = ap.address.city;
+                   // alert(addr);
+                    document.getElementById("addr").innerHTML = addr;
+                    cname2 = ap.company.name;
+                    document.getElementById("cname").innerHTML = cname2;
+						    	
+                }
+                
+            }
+                   
+           
+            xmlhttp.open("GET","http://jsonplaceholder.typicode.com/users/"+id,true);
+            xmlhttp.send();
+
+            
+        }
+                
+    </script>
+</head>
+
+<body>
+   
+    <div class="maindiv">
+        <div class="popover-title">
+            <center><h1>MEDI SCAN</h1></center>
+        </div>
+        <center> <legend>Patient Details</legend></center>
+        <center>
+            <div class="enterid">
+                <input type="text" class="search-query" id="patientid" placeholder="Enter Patient-ID" />
+                <button type="submit" class="btn btn-primary" id="submit" onclick="myFunction()" >Submit</button><br>
+                (note: please give id value from 1 to 10)
+            </div>
+        </center>
+        <div style="margin-top: 3%;">
+            <table class="table table-striped">
+
+                <td colspan="4"><h3>personal Details</h3></td>
+
+                <tr>
+                    <th> Patient Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phno</th>
+                </tr>
+                <tr>
+                    <td><h5 id="id1">ID</h5></td>
+                    <td><h5 id="name">name</h5></td>
+                    <td><h5 id="mail">male</h5></td>
+                    <td><h5 id="phno">age</h5></td>
+                </tr>
+
+
+                <tr>
+                    <th colspan="4"><h3>Other Details</h3></th>
+
+                </tr>
+                
+                <tr>
+                    <th colspan="2">City</th>
+                    <th colspan="2">company name</th>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5 id="addr">city</h5></td>
+                    <td colspan="2"><h5 id="cname">company</h5></td>
+
+                </tr>
+               </table>
+        </div>
+    </div>
+
+    
+</body>
+</html> 

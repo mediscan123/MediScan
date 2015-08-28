@@ -1,0 +1,12 @@
+c:\users\admin\documents\visual studio 2013\Projects\MediScan\MediScan\bin\MediScan.dll.config
+c:\users\admin\documents\visual studio 2013\Projects\MediScan\MediScan\bin\MediScan.dll
+c:\users\admin\documents\visual studio 2013\Projects\MediScan\MediScan\bin\MediScan.pdb
+c:\users\admin\documents\visual studio 2013\Projects\MediScan\MediScan\obj\Debug\MediScan.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\MediScan\MediScan\obj\Debug\MediScan.dll
+c:\users\admin\documents\visual studio 2013\Projects\MediScan\MediScan\obj\Debug\MediScan.pdb
+E:\MediScan\MediScan\MediScan\bin\MediScan.dll.config
+E:\MediScan\MediScan\MediScan\bin\MediScan.dll
+E:\MediScan\MediScan\MediScan\bin\MediScan.pdb
+E:\MediScan\MediScan\MediScan\obj\Debug\MediScan.csprojResolveAssemblyReference.cache
+E:\MediScan\MediScan\MediScan\obj\Debug\MediScan.dll
+E:\MediScan\MediScan\MediScan\obj\Debug\MediScan.pdb
